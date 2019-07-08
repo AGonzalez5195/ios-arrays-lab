@@ -494,6 +494,14 @@ Print out the sum of the diagonals of `myMatrix`.
 
 `var myMatrix = [[10, 14, 12], [91, 1, 9], [31, 3, 21]]`
 
+```
+var myMatrix = [[10, 14, 12], [91, 1, 9], [31, 3, 21]]
+let firstDiag = myMatrix.enumerated().map { $1[$0] }.reduce(0, +)
+let secondDiag = myMatrix.enumerated().map { $1.reversed()[$0] }.reduce(0, +)
+
+print("The sums of the diagonals are \(firstDiag) and \(secondDiag).")
+
+```
 
 ## Question 27
 
